@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel del Administrador</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Panel del Administrador</h1>
+    <p>Bienvenido, <span id="nombreUsuario"></span></p>
+  </header>
+
+  <nav id="mainTabs"></nav>
+
+  <main>
+    <section id="modPerfil" class="module hidden"></section>
+    <section id="modPagos" class="module hidden"></section>
+    <section id="modReservas" class="module hidden"></section>
+    <section id="modCertificados" class="module hidden"></section>
+    <section id="modMensajes" class="module hidden"></section>
+    <section id="modSeguimiento" class="module hidden"></section>
+  </main>
+
+  <script type="module" src="./dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio - Sistema de Gestión</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de Gestión de Conjunto</h1>
+  </header>
+
+  <main>
+    <h2>Bienvenido</h2>
+    <p>Por favor, inicia sesión o regístrate para continuar.</p>
+    <a href="login.html">Iniciar Sesión</a> |
+    <a href="registro.html">Registrarse</a>
+  </main>
+
+  <script type="module">
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+    if (usuario) {
+      switch (usuario.rol) {
+        case "administrador":
+          window.location.href = "./admin/dashboard.html";
+          break;
+        case "comite":
+          window.location.href = "./comite/dashboard.html";
+          break;
+        case "residente":
+          window.location.href = "./residente/dashboard.html";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
